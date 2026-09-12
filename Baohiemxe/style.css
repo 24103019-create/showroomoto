@@ -1,0 +1,907 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background: white;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    height: 80px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid white;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logo-circle {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid black;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar a {
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color:gray;
+}
+
+
+/* MENU */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 26px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    min-height: 700px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url("hinhanh/banner-baohiemxesang-liberty.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .65),
+            rgba(0, 0, 0, .05)
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    color: #fff;
+}
+
+.hero-small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 20px;
+
+    max-width: 550px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+    border: 1px solid transparent;
+}
+
+.btn-white {
+    background: white;
+
+    color: black;
+}
+
+.btn-white:hover {
+    background: white;
+}
+
+.btn-black {
+    background: black;
+
+    color: white;
+}
+
+.btn-black:hover {
+    background: #333;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 120px 30px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: gray;
+
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: clamp(35px, 5vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   INSURANCE
+================================================== */
+
+.insurance {
+    padding: 0 6% 120px;
+}
+
+.insurance-container {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.insurance-card {
+    background: #f4f4f4;
+
+    transition: .3s;
+}
+
+.insurance-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 360px;
+
+    overflow: hidden;
+}
+
+.card-image img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.insurance-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 45px;
+}
+
+.card-label {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+    margin-bottom: 12px;
+}
+
+.card-content h2 {
+    font-size: 38px;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    color: #555;
+
+    margin-bottom: 30px;
+}
+
+.text-link {
+    font-weight: 600;
+
+    border-bottom: 1px solid black;
+
+    padding-bottom: 5px;
+}
+
+.text-link span {
+    margin-left: 10px;
+}
+
+
+/* ==================================================
+   OFFERS
+================================================== */
+
+.offers {
+    background: white;
+
+    padding: 120px 6%;
+}
+
+.offers-title {
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.offers-title h2 {
+    font-size: 52px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.offers-title > p:last-child {
+    color: gray;
+
+    font-size: 17px;
+}
+
+.offer-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.offer-card {
+    background: white;
+
+    padding: 45px;
+
+    min-height: 350px;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .08);
+}
+
+.offer-number {
+    font-size: 13px;
+
+    color: #888;
+
+    margin-bottom: 40px;
+}
+
+.offer-card h3 {
+    font-size: 27px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.offer-date {
+    font-size: 13px;
+
+    color: gray;
+
+    margin-bottom: 20px;
+}
+
+.offer-card > p:not(.offer-date) {
+    color: gray;
+
+    margin-bottom: 30px;
+}
+
+.offer-card a {
+    font-weight: 600;
+
+    border-bottom: 1px solid black;
+
+    padding-bottom: 5px;
+}
+
+
+/* ==================================================
+   FEATURE
+================================================== */
+
+.feature {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    min-height: 650px;
+}
+
+.feature-image {
+    overflow: hidden;
+}
+
+.feature-image img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.feature-content {
+    padding: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+.feature-content h2 {
+    font-size: 58px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+.feature-content p:not(.section-label) {
+    color: gray;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==================================================
+   PROCESS
+================================================== */
+
+.process {
+    padding: 120px 6%;
+}
+
+.process-header {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.process-header h2 {
+    font-size: 50px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.process-header p:last-child {
+    color: gray;
+}
+
+.process-grid {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top: 1px solid white;
+}
+
+.process-item {
+    padding: 35px 25px;
+
+    border-right: 1px solid #ddd;
+}
+
+.process-item:last-child {
+    border-right: none;
+}
+
+.process-item span {
+    font-size: 13px;
+
+    color: #888;
+}
+
+.process-item h3 {
+    font-size: 22px;
+
+    font-weight: 400;
+
+    margin: 30px 0 15px;
+}
+
+.process-item p {
+    color: #666;
+
+    font-size: 15px;
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.contact-box {
+    max-width: 700px;
+
+    padding: 30px;
+}
+
+.contact .section-label {
+    color: #ccc;
+}
+
+.contact h2 {
+    font-size: 58px;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.contact p:not(.section-label) {
+    color: #ddd;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    background: #111;
+
+    color: #fff;
+
+    padding: 70px 6% 20px;
+}
+
+.footer-top {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr repeat(3, 1fr);
+
+    gap: 50px;
+
+    padding-bottom: 60px;
+}
+
+.footer-brand p {
+    color: #888;
+
+    margin-top: 20px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #999;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #333;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+/* ==================================================
+   RESPONSIVE TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .insurance-container {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: 500px;
+    }
+
+    .process-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .process-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .footer-top {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVE MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .logo-circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        width: 85%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .intro {
+        padding: 80px 25px;
+    }
+
+    .intro h2 {
+        font-size: 35px;
+    }
+
+    .insurance {
+        padding:
+            0 20px 80px;
+    }
+
+    .card-image {
+        height: 260px;
+    }
+
+    .card-content {
+        padding: 30px;
+    }
+
+    .card-content h2 {
+        font-size: 30px;
+    }
+
+    .offers {
+        padding: 80px 20px;
+    }
+
+    .offers-title h2 {
+        font-size: 38px;
+    }
+
+    .offer-card {
+        padding: 30px;
+    }
+
+    .feature-content {
+        padding: 60px 30px;
+    }
+
+    .feature-content h2 {
+        font-size: 42px;
+    }
+
+    .process {
+        padding: 80px 20px;
+    }
+
+    .process-header h2 {
+        font-size: 38px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-item {
+        border-right: none;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    .contact {
+        min-height: 450px;
+    }
+
+    .contact h2 {
+        font-size: 42px;
+    }
+
+    .footer {
+        padding:
+            60px 25px 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+}
