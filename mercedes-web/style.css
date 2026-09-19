@@ -1,0 +1,676 @@
+/* =====================================================
+   MERCEDES-BENZ VIET NAM WEBSITE
+   STYLE.CSS
+   ===================================================== */
+
+
+/* ===================== CƠ BẢN ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.7;
+}
+
+
+/* ===================== HEADER ===================== */
+
+.header {
+    height: 80px;
+    background: #050505;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-star {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* ===================== HERO ===================== */
+
+.hero {
+    min-height: 700px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.48)
+        ),
+        url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.hero-content {
+    width: 650px;
+    margin-left: 9%;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 64px;
+    line-height: 1.08;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+.hero p:not(.small-title) {
+    max-width: 550px;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border: 1px solid white;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* ===================== SECTION CHUNG ===================== */
+
+.section {
+    padding: 110px 8%;
+}
+
+.section-title {
+    max-width: 850px;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 22px;
+}
+
+/*
+   QUAN TRỌNG:
+   Tiêu đề dùng Arial để tránh lỗi giãn chữ
+   tiếng Việt trên một số máy.
+*/
+
+.section-title h2 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+
+    word-spacing: normal;
+
+    white-space: normal;
+}
+
+.section-title.center {
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.section-title span {
+    display: block;
+
+    color: #777;
+
+    margin-top: 20px;
+}
+
+
+/* ===================== GIỚI THIỆU ===================== */
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.intro-text p {
+    font-size: 16px;
+
+    margin-bottom: 25px;
+
+    color: #444;
+}
+
+.intro-image {
+    height: 570px;
+
+    overflow: hidden;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ===================== HỒ SƠ DOANH NGHIỆP ===================== */
+
+.profile-section {
+    background: #f3f3f3;
+
+    padding: 110px 8%;
+}
+
+.profile-container {
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: #d2d2d2;
+}
+
+.profile-card {
+    background: #f3f3f3;
+
+    min-height: 190px;
+
+    padding: 35px;
+}
+
+.profile-label {
+    display: block;
+
+    color: #999;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.profile-card h3 {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ===================== MERCEDES EQ ===================== */
+
+.eq-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background: #111;
+
+    color: white;
+}
+
+.eq-image {
+    min-height: 650px;
+
+    overflow: hidden;
+}
+
+.eq-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.eq-content {
+    padding: 100px 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eq-content .small-title {
+    color: #aaa;
+}
+
+.eq-content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -1px;
+}
+
+.eq-content p:not(.small-title) {
+    color: #ccc;
+
+    margin-bottom: 22px;
+
+    font-size: 16px;
+}
+
+
+/* ===================== NHIỆM VỤ & CHIẾN LƯỢC ===================== */
+
+.strategy {
+    background: #fff;
+}
+
+.strategy .section-title {
+    max-width: 900px;
+}
+
+.strategy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.strategy-card {
+    border-top: 1px solid #222;
+
+    padding: 35px 10px;
+}
+
+.number {
+    font-size: 45px;
+
+    color: #aaa;
+
+    margin-bottom: 18px;
+
+    font-weight: 300;
+}
+
+.strategy-card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.strategy-card p {
+    color: #666;
+
+    font-size: 15px;
+}
+
+
+/* ===================== THƯ VIỆN ẢNH ===================== */
+
+.gallery-section {
+    background: #f3f3f3;
+
+    padding: 110px 6%;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 260px;
+
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+
+    position: relative;
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ===================== FOOTER ===================== */
+
+footer {
+    background: #050505;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.footer-logo {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+footer p {
+    color: #999;
+
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #333;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 1000px) {
+
+    .hero-content {
+        width: auto;
+
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .eq-section {
+        grid-template-columns: 1fr;
+    }
+
+    .eq-image {
+        min-height: 500px;
+    }
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ===================== TABLET ===================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        margin: 0 30px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .section {
+        padding: 80px 25px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .profile-section {
+        padding: 80px 25px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eq-content {
+        padding: 70px 25px;
+    }
+
+    .eq-content h2 {
+        font-size: 38px;
+    }
+
+    .gallery-section {
+        padding: 80px 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 260px;
+    }
+
+    .gallery-item.large {
+        grid-column: span 1;
+
+        grid-row: span 1;
+    }
+}
+
+
+/* ===================== ĐIỆN THOẠI ===================== */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .logo-star {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p:not(.small-title) {
+        font-size: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .intro-image {
+        height: 350px;
+    }
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .eq-image {
+        min-height: 350px;
+    }
+
+    .eq-content h2 {
+        font-size: 34px;
+    }
+
+}
